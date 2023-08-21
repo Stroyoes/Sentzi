@@ -1,0 +1,8 @@
+# all pycache dirs
+**/__pycache__/
+
+# venv ,activate.bat and files in bin folder
+bin/
+sentzi-venv/
+activate.ps1
+
