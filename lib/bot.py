@@ -5,7 +5,7 @@ import typing
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
-from config import DEV_EMAIL_ID, DEV_PASS
+from lib.config import DEV_EMAIL_ID, DEV_PASS
 
 # email configs
 smtp_server = 'smtp.gmail.com'
@@ -24,7 +24,7 @@ def send(
     html_msg = f"""
     <h2 id="-pd_name-"><code>{pd_name}</code></h2>
     <p><a href="mailto:{From}"><code>{name}</code></a> has just created an ✨ awesome ✨ new product (<code>{pd_name}</code>)and he&#39;d want to share it to you.</p>
-    <p>So, simply spread your love 😊 . Please give the product a rating <a href=""><code>here</code></a></p>
+    <p>So, simply spread your love 😊 . Visit <a href=""><code>here</code></a></p> to know more . 
     <p>Created with ❤️ using <a href="https://github.com/sreezx/Sentzi"><code>Sentzi</code></a></p>
     """
 

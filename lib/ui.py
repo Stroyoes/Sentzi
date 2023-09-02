@@ -6,7 +6,7 @@ def set_state_if_absent(key, value):
         st.session_state[key] = value
 
 def set_init_state():
-    set_state_if_absent('share','An email to share the app ')
+    set_state_if_absent('SHARE_COUNT',0)
 
 
 def reset_results(*args):
@@ -34,8 +34,7 @@ def sidebar():
             "1. Enter your **email address** below\n"
             "2. Enter your **name** (but not your real one 😈)\n"
             "3. You will now see your dashboard getting loaded ... \n"
-            "4. You can create only one product using the app storage .\n"
-            "5. To store your unlimited data 🗃️ log in to `Telegram`"
+            "4. You can create only one product at a time .\n"
 
         )
 
@@ -62,10 +61,19 @@ def sidebar():
         st.markdown("---")
         st.markdown(
             "## How's this possible ?\n"
-            "Built using `Python` and a beautiful web app framework - [`Streamlit`](https://streamlit.io) \n"
+            "Built using `Python` and the beautiful web app framework - [`Streamlit`](https://streamlit.io) \n"
             "Uses the [`TextBlob`](https://github.com/sloria/textblob) library for sentiment analysis  \n\n"
             "The source code is also on [GitHub](https://github.com/sreezx/Sentzi#readme)"
         )
         st.markdown("---")
+
         st.markdown("Made by [`sreezx`](https://github.com/sreezx)")
+
+        st.markdown("---")
+
+        st.markdown("[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/sreezx.y)"
+                    " [![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sreezx/Sentzi)")
+
+        st.markdown("---")
         st.image(image)
+

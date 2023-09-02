@@ -49,7 +49,7 @@ class Sentiment:
                 text  : {self.text}
         )"""
 
-    def get(self) -> float:
+    def get(self) -> typing.Dict[str , typing.Any]:
 
         # check is its positive negative or neutral
         if self.polarity < 0:
