@@ -3,9 +3,11 @@
 # `Sentzi` is a web app that generates a visualized output of product reviews through sentiment analysis.
 
 from textblob import TextBlob
-import json
 import typing
 
+# json and csv lib
+import json
+import csv
 
 class Sentiment:
     """ Represents a sentiment object """
@@ -76,4 +78,18 @@ class Sentiment:
         
         return data
 
+def writeCSV(header : list[str],dataList : list[list[str]]):
+    with open(r"temp.csv", 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(header)
+        # write multiple rows
+        writer.writerows(dataList) # write content
 
+def writeJSON(data : dict):
+    with open(r"temp.json","w") as json_file:
+        json.dump(
+            data,
+            json_file,
+            indent=4,
+            sort_keys=True
+        )

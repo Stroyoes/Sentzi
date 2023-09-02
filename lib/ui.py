@@ -11,13 +11,12 @@ def set_init_state():
     set_state_if_absent('POS',0)
     set_state_if_absent('NEG',0)
     set_state_if_absent('NUT',0)
+    set_state_if_absent('USER_MSG',[])
+    set_state_if_absent('SENT_LEVEL',[])
 
 def reset_sent_scores(keys = ['POS','NEG','NUT']):
     for k in keys:
         st.session_state[k] = 0
-
-def reset_results(*args):
-    st.session_state.result = None
 
 def set_email(email: str):
     st.session_state["EMAIL_ID"] = email

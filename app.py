@@ -1,16 +1,19 @@
 import streamlit as st
 import time
 
-from lib.ui import set_init_state, reset_results, sidebar, reset_sent_scores
+from pathlib import Path
+
+from lib.ui import set_init_state, sidebar, reset_sent_scores
 from lib.bot import send
-from lib.lib import Sentiment
+from lib.lib import Sentiment, writeCSV, writeJSON
 
 # for drawing charts
 import pandas as pd
 import numpy as np
 
-# json lib
+# json and csv lib
 import json
+import csv
 
 # set the init values
 set_init_state()
@@ -26,9 +29,6 @@ def share(email : str):
 
 def count_share(i : int):
     st.session_state["SHARE_COUNT"] += 1
-
-def set_chat(msg : str):
-    st.session_state["USER_MSG"] = msg
 
 def set_positive_level(value : int):
 
@@ -102,6 +102,30 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
             
             if st.button("Just refresh", help="Can't see the changes in graph ? Hit `Just refresh`"):
                 pass
+            
+            if st.session_state.get("USER_MSG","") and st.session_state.get("SENT_LEVEL",""):
+                csvTab , jsonTab = st.tabs(["csv","json"])
+                with csvTab:
+                    st.write('download `data` as `csv` format ')
+                    if Path('temp.csv').is_file():
+                        with open("temp.csv","r") as file:
+                            c_btn = st.download_button(
+                                "Download (csv)",
+                                data=file,
+                                file_name="temp.csv",
+                                mime='text/csv',
+                            )
+                with jsonTab:
+                    st.write('download `data` as `json`')
+                    if Path('temp.json').is_file():
+                        with open("temp.json", "r") as file:
+                            j_btn = st.download_button(
+                                "Download (json)",
+                                data=file,
+                                file_name="temp.json",
+
+                            )
+
     
     with col1:
 
@@ -181,13 +205,29 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
         )
 
         if prompt:
-            set_chat(prompt)
             st.toast("Hi ! 👋 Can't see the changes in graph ? Hit `Just refresh`")
         
             # analyse the chat
             sent_level = Sentiment(prompt).get().get('level')
             sent_score = Sentiment(prompt).get().get('score')
 
+            st.session_state["USER_MSG"].append(prompt)
+            st.session_state["SENT_LEVEL"].append(sent_level)
+
+        
+            writeJSON({
+                'texts' : st.session_state["USER_MSG"],
+                'levels' : st.session_state["SENT_LEVEL"]
+            })
+            toList = []
+            for m , l in zip(st.session_state["USER_MSG"], st.session_state["SENT_LEVEL"]):
+                toList.append([m , l])
+            writeCSV(
+                header=['texts', 'levels'],
+                dataList=[
+                    toList
+                ]
+            )
             # set the score for viz
             {
                 'negative' : lambda : set_negative_level(sent_score),
