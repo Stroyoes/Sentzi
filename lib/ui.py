@@ -20,6 +20,8 @@ def set_name(name : str):
 
 def sidebar():
     with st.sidebar:
+        if st.button("`VERSION`"):
+            
         image = Image.open(r'C:\Users\MyLap\Documents\GitHub\Sentzi\data\logo.png')
         st.markdown(
             "Welcome 😊 to `Sentzi` \n\n"
