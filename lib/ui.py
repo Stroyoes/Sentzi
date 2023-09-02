@@ -1,5 +1,6 @@
 import streamlit as st
 from PIL import Image
+import requests
 
 def set_state_if_absent(key, value):
     if key not in st.session_state:
@@ -7,7 +8,13 @@ def set_state_if_absent(key, value):
 
 def set_init_state():
     set_state_if_absent('SHARE_COUNT',0)
+    set_state_if_absent('POS',0)
+    set_state_if_absent('NEG',0)
+    set_state_if_absent('NUT',0)
 
+def reset_sent_scores(keys = ['POS','NEG','NUT']):
+    for k in keys:
+        st.session_state[k] = 0
 
 def reset_results(*args):
     st.session_state.result = None
@@ -20,8 +27,11 @@ def set_name(name : str):
 
 def sidebar():
     with st.sidebar:
-        if st.button("`VERSION`"):
-            
+        if st.button("# **version**",help="Show the version (floating)",use_container_width=True):
+            version_file = "https://cdn.jsdelivr.net/gh/sreezx/Sentzi/version"
+            version = requests.get(version_file).content.decode()
+            st.toast(f'### 🏷️ version `{version}`')
+
         image = Image.open(r'C:\Users\MyLap\Documents\GitHub\Sentzi\data\logo.png')
         st.markdown(
             "Welcome 😊 to `Sentzi` \n\n"
