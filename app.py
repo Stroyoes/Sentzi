@@ -47,6 +47,16 @@ def clear_all_data():
         if Path(f).is_file():
             Path(f).open("w",encoding="utf-8").write("")
 
+# remove footer and header
+hide_st_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
 st.write('# `Sentzi`')
 
 st.divider()
