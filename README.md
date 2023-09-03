@@ -24,7 +24,7 @@ $ sentzi-venv\Scripts\Activate.ps1 (for windows powershell)
 ```cmd
 $ pip install -r requirements.txt
 ```
-- Make sure the project structure is **similar** to this 
+- Make sure the project structure is _**similar**_ to this 
 
 <img src="data/tree.png" alt="drawing" width="280"/>
 
