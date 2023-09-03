@@ -8,3 +8,7 @@
 sentzi-venv/
 activate.ps1
 
+# temp files
+temp.csv
+temp.json
+
