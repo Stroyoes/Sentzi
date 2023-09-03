@@ -31,7 +31,7 @@ def sidebar():
             version = requests.get(version_file).content.decode()
             st.toast(f'### 🏷️ version `{version}`')
 
-        image = Image.open(r'C:\Users\MyLap\Documents\GitHub\Sentzi\data\logo.png')
+        image = Image.open(r'data/logo.png')
         st.markdown(
             "Welcome 😊 to `Sentzi` \n\n"
             "This is a fun project ,\n "
