@@ -13,6 +13,8 @@ pinned: false
 
 ## 🎉 Try now on `Streamlit` [`Cloud`](https://sentzi.streamlit.app/) (_`recommended`_) (or) [`Space`](https://huggingface.co/spaces/Sreezx/Sentzi) (_`very laggy !`_)
 
+https://github.com/sreezx/Sentzi/assets/121812287/6cdc0681-56c2-44dd-bce6-e595056a8a6b
+
 A fun 🥳 project made to demonstrate the practical application of sentiment analysis 
 
 This is a demo app made using [`Streamlit`](streamlit.io) Library ( the best Python library for creating beautiful web apps )
