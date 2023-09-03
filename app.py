@@ -197,7 +197,7 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                 
             )
 
-            t2_btn = st.button('# Reset graph',help="Reset graph from all data",use_container_width=True)
+            t2_btn = st.button('# Reset graph',key="t2_btn",help="Reset graph from all data",use_container_width=True)
             
             if t2_btn:
                 reset_sent_scores()
@@ -218,7 +218,7 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                         'the area will be more in the region of greater score .'
                         'You may need to `Reset Graph` if the `positive` and `negative` reaches'
                         ' its max score (i.e `1.0` and `-1.0` resp)')
-            t3_btn = st.button('# Reset graph',help="Reset graph from all data",use_container_width=True)
+            t3_btn = st.button('# Reset graph',key="t3_btn",help="Reset graph from all data",use_container_width=True)
             
             if t3_btn:
                 reset_sent_scores()
