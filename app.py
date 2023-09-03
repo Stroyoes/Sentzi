@@ -42,6 +42,16 @@ def set_neutral_level(value : int):
 
     st.session_state["NUT"] = value
 
+def clear_all_data():
+    st.session_state["USER_MSG"] = []
+    st.session_state["SENT_LEVEL"] = []
+
+    # open the temp data files and clear them
+    files = ['temp.csv','temp.json']
+    for f in files:
+        if Path(f).is_file():
+            Path(f).open("w",encoding="utf-8").write("")
+
 st.write('# `Sentzi`')
 
 st.divider()
@@ -114,7 +124,11 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                                 data=file,
                                 file_name="temp.csv",
                                 mime='text/csv',
+                                help="Download the data as `temp.csv`"
                             )
+                        if Path('temp.csv').stat().st_size == 0:
+                            st.warning("The file (`temp.csv`) is empty !")
+                            
                 with jsonTab:
                     st.write('download `data` as `json`')
                     if Path('temp.json').is_file():
@@ -123,8 +137,19 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                                 "Download (json)",
                                 data=file,
                                 file_name="temp.json",
+                                help="Download the data as `temp.json`"
 
                             )
+                        if Path('temp.json').stat().st_size == 0:
+                            st.warning("The file (`temp.json`) is empty !")
+
+            if st.button(
+                "Clear Data",
+                help="Clear all data. Clear all stored user reviews and sentiment levels ."
+            ):
+                clear_all_data()
+                st.toast('Data cleared ! 🗑️')
+                
 
     
     with col1:
