@@ -159,6 +159,12 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
         st.markdown(f"### {st.session_state.get('NAME','')}'s Dashboard")
         # make 3 tabs
         tab1, tab2, tab3 = st.tabs(["Shares", "Viz 1", "Viz 2"])
+        if st.button('# Reset graph',help="Reset graph from all data",use_container_width=True):
+            reset_sent_scores()
+            time.sleep(0.5)
+            reset_sent_scores()
+            st.toast('### Graph 📈 reseted ! 🔄')
+            st.toast("Hi ! 👋 Can't see the changes in graph ? Hit `Just refresh`")
         with tab1:
             if st.button('# Reset shares',help="Reset all shares",use_container_width=True):
                 st.session_state["SHARE_COUNT"] = 0
@@ -197,13 +203,6 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                 
             )
 
-            if st.button('# Reset graph',help="Reset graph from all data",use_container_width=True):
-                reset_sent_scores()
-                time.sleep(0.5)
-                reset_sent_scores()
-                st.toast('### Graph 📈 reseted ! 🔄')
-                st.toast("Hi ! 👋 Can't see the changes in graph ? Hit `Just refresh`")
-
             st.line_chart(
                 viz_data,
                 color=["#44f"]
@@ -216,13 +215,6 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                         'the area will be more in the region of greater score .'
                         'You may need to `Reset Graph` if the `positive` and `negative` reaches'
                         ' its max score (i.e `1.0` and `-1.0` resp)')
-
-            if st.button('# Reset graph',help="Reset graph from all data",use_container_width=True):
-                reset_sent_scores()
-                time.sleep(0.5)
-                reset_sent_scores()
-                st.toast('### Graph 📈 reseted ! 🔄')
-                st.toast("Hi ! 👋 Can't see the changes in graph ? Hit `Just refresh`")
 
             st.area_chart(
                 viz_data,
