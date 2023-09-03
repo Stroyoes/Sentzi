@@ -9,11 +9,6 @@ from lib.lib import Sentiment, writeCSV, writeJSON
 
 # for drawing charts
 import pandas as pd
-import numpy as np
-
-# json and csv lib
-import json
-import csv
 
 # set the init values
 set_init_state()
@@ -27,7 +22,7 @@ def set_pd_name(pd_name : str):
 def share(email : str):
     st.session_state["SHARE"] = email
 
-def count_share(i : int):
+def count_share():
     st.session_state["SHARE_COUNT"] += 1
 
 def set_positive_level(value : int):
@@ -94,7 +89,7 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                 st.success(f'Shared !')
 
                 # increase share count
-                count_share(1)
+                count_share()
                 
 
             else:
@@ -126,8 +121,6 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                                 mime='text/csv',
                                 help="Download the data as `temp.csv`"
                             )
-                        if Path('temp.csv').stat().st_size == 0:
-                            st.warning("The file (`temp.csv`) is empty !")
                             
                 with jsonTab:
                     st.write('download `data` as `json`')
@@ -140,16 +133,15 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                                 help="Download the data as `temp.json`"
 
                             )
-                        if Path('temp.json').stat().st_size == 0:
-                            st.warning("The file (`temp.json`) is empty !")
 
-            if st.button(
-                "Clear Data",
-                help="Clear all data. Clear all stored user reviews and sentiment levels ."
-            ):
-                clear_all_data()
-                st.toast('Data cleared ! 🗑️')
-                
+                if st.button(
+                    "Clear Data",
+                    help="Clear all data. Clear all stored user reviews and sentiment levels ."
+                ):
+                    clear_all_data()
+                    st.toast('Data cleared ! 🗑️')
+                    st.toast("Hi ! 👋 Can't see the changes ? Hit `Just refresh`")
+                    
 
     
     with col1:
@@ -249,9 +241,7 @@ if st.session_state.get("EMAIL_ID") and st.session_state.get("NAME"):
                 toList.append([m , l])
             writeCSV(
                 header=['texts', 'levels'],
-                dataList=[
-                    toList
-                ]
+                dataList=toList
             )
             # set the score for viz
             {

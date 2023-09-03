@@ -46,8 +46,9 @@ def sidebar():
             "2. Enter your **name** (but not your real one 😈)\n"
             "3. You will now see your dashboard getting loaded ... \n"
             "4. You can create only one product at a time .\n"
+            "5. To ensure that all changes are distributed evenly throughout the app, you might need to occasionally tap the `Just Refresh` button. \n"
 
-        )
+        ,help="Why `Just Refresh` 😞 ? Well , its actually a bug 🐞 i need to fix in the next release 🥺")
 
         email_id_input = st.text_input(
             "Your email address",
