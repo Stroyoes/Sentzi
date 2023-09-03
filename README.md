@@ -1,6 +1,6 @@
 # Sentzi
 
-## 🎉 Try now on [Space]() 
+## 🎉 Try now on [Space](https://huggingface.co/spaces/Sreezx/Sentzi) 
 
 A fun 🥳 project made to demonstrate the practical application of sentiment analysis 
 
