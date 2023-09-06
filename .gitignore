@@ -8,7 +8,13 @@
 sentzi-venv/
 activate.ps1
 
-# temp files
+# temp and log files
 temp.csv
 temp.json
+dataset_1.csv
+dataset_2.csv
+temp_version.txt
+test_temp.csv
+test_temp.json
+*.log
 

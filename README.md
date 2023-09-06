@@ -24,7 +24,7 @@ The sentiment analysis is achieved using [`Textblob`](https://github.com/sloria/
 ## Installation 📦
 
 > To run the application locally 
-- **(Optional)** Create a `venv` and activate it using 
+- **(Optional)** Create a `venv` (_sentzi-venv_) and activate it using 
 ```cmd
 $ py -m venv sentzi-venv
 $ sentzi-venv\Scripts\Activate.ps1 (for windows powershell)
@@ -44,9 +44,9 @@ $ pip install -r requirements.txt
 - Head to `root` dir and create a `.env` with the following code 
 
 ```cmd
-export DEV_EMAIL_ID=an_emailID_to_use_for_email_bot
+DEV_EMAIL_ID=an_emailID_to_use_for_email_bot
 
-export DEV_PASS=password_of_that_emailID
+DEV_PASS=password_of_that_emailID
 ```
 
 - Everything is ready ! Run the `streamlit` app using 
@@ -54,4 +54,13 @@ export DEV_PASS=password_of_that_emailID
 $ streamlit run app.py
 ```
 and enjoy 😎 !
+
+## Testing ⚙️ 
+
+You can test the application locally using the `test\sentzi-test.py` CLI tool . 
+
+> `sentzi-test.py` is an extension of the sentzi project made primarily to test the sentzi backend modules . 
+
+<img src="data/test-help.png" alt="drawing" width="1400"/>
+
 
