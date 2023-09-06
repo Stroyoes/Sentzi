@@ -39,7 +39,7 @@ $ pip install -r requirements.txt
 ```
 - Make sure the project structure is _**similar**_ to this 
 
-<img src="data/tree.png" alt="drawing" width="280"/>
+<img src="data/tree.png" alt="tree" width="280"/>
 
 - Head to `root` dir and create a `.env` with the following code 
 
@@ -60,7 +60,48 @@ and enjoy 😎 !
 You can test the application locally using the `test\sentzi-test.py` CLI tool . 
 
 > `sentzi-test.py` is an extension of the sentzi project made primarily to test the sentzi backend modules . 
+---
+_`sentzi-test help`_
+<img src="data/test-help.png" alt="sentzi-test-help" style="max-width: 100% ;" />
 
-<img src="data/test-help.png" alt="drawing" style="max-width: 100% ;" />
+---
+_`Using '-with' option to get setiment of a text and saving it as 'json' file . '-o "show"' is default . `_
+
+<video style="max-width: 100% ;" controls>
+<source src="data/test-simple-text.mp4" type="video/mp4">
+Your browser does not support video tag
+</video>
+
+---
+_`Using '-with' option to get setiment from a text file . Here logging is disabled . `_
+
+<video style="max-width: 100% ;" controls>
+<source src="data/test-from-file.mp4" type="video/mp4">
+Your browser does not support video tag
+</video>
+
+---
+_`Using '-with' option to get setiment from an external dataset . Here output is hidden. `_
+
+<video style="max-width: 100% ;" controls>
+<source src="data/test-ext-1.mp4" type="video/mp4">
+Your browser does not support video tag
+</video>
+
+---
+_`Using '-with' option to get setiment from an external dataset . Here 12 reviews are retrieved from the dataset `_
+
+<video style="max-width: 100% ;" controls>
+<source src="data/test-ext-2.mp4" type="video/mp4">
+Your browser does not support video tag
+</video>
+
+
+
+
+
+
+
+
 
 
