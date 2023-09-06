@@ -61,6 +61,6 @@ You can test the application locally using the `test\sentzi-test.py` CLI tool .
 
 > `sentzi-test.py` is an extension of the sentzi project made primarily to test the sentzi backend modules . 
 
-<img src="data/test-help.png" alt="drawing" width="1900"/>
+<img src="data/test-help.png" alt="drawing" style="max-width: 100% ;" />
 
 
