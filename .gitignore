@@ -6,8 +6,6 @@
 
 # extensions
 *.mp4
-*.ps1
-*.bat
 
 # venv ,activate.bat
 sentzi-venv/
