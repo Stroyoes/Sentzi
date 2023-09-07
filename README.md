@@ -83,3 +83,16 @@ https://github.com/sreezx/Sentzi/assets/121812287/873b5792-bdb9-4008-9ad5-eb846a
 _`Using '-with' option to get setiment from an external dataset . Here 12 reviews are retrieved from the dataset `_
 
 https://github.com/sreezx/Sentzi/assets/121812287/85def485-b395-4adc-bb20-3d709b5494ba
+
+---
+_`There are many other things you can do with 'sentzi-test.py' 😮`_
+
+_`Using 'sentzi-test.py' to check the version of 'sentzi'`_
+
+---
+_`Obtaining the link to this repository and reading the 'README' file using the 'readMd.py' script in 'test_utils' `_
+
+---
+_`Opening another github readme file using 'readMd.py'`_
+
+
