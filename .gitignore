@@ -4,6 +4,9 @@
 # all environment files
 .env
 
+# mp4 files if any
+*.mp4
+
 # venv ,activate.bat
 sentzi-venv/
 activate.ps1
