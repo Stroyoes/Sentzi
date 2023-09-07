@@ -72,33 +72,14 @@ https://github.com/sreezx/Sentzi/assets/121812287/18f15e3a-340d-486e-aa83-2e07eb
 ---
 _`Using '-with' option to get setiment from a text file . Here logging is disabled . `_
 
-<video style="max-width: 100% ;" controls>
-<source src="data/test-from-file.mp4" type="video/mp4">
-Your browser does not support video tag
-</video>
+https://github.com/sreezx/Sentzi/assets/121812287/fd036d98-d65e-4a7d-91b4-028865bd5786
 
 ---
 _`Using '-with' option to get setiment from an external dataset . Here output is hidden. `_
 
-<video style="max-width: 100% ;" controls>
-<source src="data/test-ext-1.mp4" type="video/mp4">
-Your browser does not support video tag
-</video>
+https://github.com/sreezx/Sentzi/assets/121812287/873b5792-bdb9-4008-9ad5-eb846ac8f210
 
 ---
 _`Using '-with' option to get setiment from an external dataset . Here 12 reviews are retrieved from the dataset `_
 
-<video style="max-width: 100% ;" controls>
-<source src="data/test-ext-2.mp4" type="video/mp4">
-Your browser does not support video tag
-</video>
-
-
-
-
-
-
-
-
-
-
+https://github.com/sreezx/Sentzi/assets/121812287/85def485-b395-4adc-bb20-3d709b5494ba
