@@ -89,10 +89,16 @@ _`There are many other things you can do with 'sentzi-test.py' 😮`_
 
 _`Using 'sentzi-test.py' to check the version of 'sentzi'`_
 
+https://github.com/sreezx/Sentzi/assets/121812287/84e07139-d461-4cd2-ac5b-8e362eaacd8c
+
 ---
 _`Obtaining the link to this repository and reading the 'README' file using the 'readMd.py' script in 'test_utils' `_
 
+https://github.com/sreezx/Sentzi/assets/121812287/0feebbc6-e1ab-4295-a86b-2aac641fe6a5
+
 ---
 _`Opening another github readme file using 'readMd.py'`_
+
+https://github.com/sreezx/Sentzi/assets/121812287/6841931c-0c3e-4a21-b355-a1daec032432
 
 
