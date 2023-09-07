@@ -67,10 +67,7 @@ _`sentzi-test help`_
 ---
 _`Using '-with' option to get setiment of a text and saving it as 'json' file . '-o "show"' is default . `_
 
-<video style="max-width: 100% ;" controls>
-<source src="data/test-simple-text.mp4" type="video/mp4">
-Your browser does not support video tag
-</video>
+https://github.com/sreezx/Sentzi/assets/121812287/18f15e3a-340d-486e-aa83-2e07ebd9705c
 
 ---
 _`Using '-with' option to get setiment from a text file . Here logging is disabled . `_
