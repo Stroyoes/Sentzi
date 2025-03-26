@@ -9,6 +9,8 @@ app_file: app.py
 pinned: false
 ---
 
+[![Sync to Hugging Face hub](https://github.com/Stroyoes/Sentzi/actions/workflows/hf_actions.yaml/badge.svg)](https://github.com/Stroyoes/Sentzi/actions/workflows/hf_actions.yaml)
+
 > [!WARNING]
 > ⚠️ **THIS REPO IS NO LONGER MAINTAINED** ⚠️
 >
