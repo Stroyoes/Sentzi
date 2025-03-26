@@ -9,6 +9,11 @@ app_file: app.py
 pinned: false
 ---
 
+> [!WARNING]
+> ⚠️ **THIS REPO IS NO LONGER MAINTAINED** ⚠️
+>
+> **This repository has been archived and will not receive any further updates or support.**
+
 # Sentzi
 
 ## 🎉 Try now on `Streamlit` [`Cloud`](https://sentzi.streamlit.app/) (_`recommended`_) (or) [`Space`](https://huggingface.co/spaces/Sreezx/Sentzi) (_`very laggy !`_)
